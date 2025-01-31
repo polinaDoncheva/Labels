@@ -7,8 +7,8 @@ public class SimpleLabel implements Label {
     public SimpleLabel(String value) {
         this.value = value;
     }
+
     public String getText() {
         return value;
     }
-
 }

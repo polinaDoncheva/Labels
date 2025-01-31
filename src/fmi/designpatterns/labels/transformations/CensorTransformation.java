@@ -2,8 +2,6 @@ package fmi.designpatterns.labels.transformations;
 
 import fmi.designpatterns.labels.exceptions.TextTransformationException;
 
-import java.util.regex.Pattern;
-
 public class CensorTransformation implements TextTransformation {
 
     private final String wordToCensor;
