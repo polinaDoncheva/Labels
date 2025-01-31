@@ -11,5 +11,4 @@ public class SimpleLabel implements Label {
     public String getText() {
         return value;
     }
-
 }

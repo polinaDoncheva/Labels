@@ -4,6 +4,7 @@ import fmi.designpatterns.labels.Label;
 import fmi.designpatterns.labels.transformations.TextTransformation;
 
 import java.util.List;
+import java.util.Objects;
 
 public class CyclingTransformationsDecorator extends LabelDecoratorBase {
 
@@ -14,6 +15,28 @@ public class CyclingTransformationsDecorator extends LabelDecoratorBase {
         super(label);
         this.transformations = transformations;
         this.index = 0;
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        if(this == object) {
+            return true;
+        }
+
+        if (object == null || getClass() != object.getClass()) {
+            return false;
+        }
+
+        CyclingTransformationsDecorator other = (CyclingTransformationsDecorator) object;
+        boolean areLabelsEqual = !(label instanceof LabelDecoratorBase) || label.equals(other.label);
+
+        return areLabelsEqual && index == other.index &&
+            Objects.equals(transformations, other.transformations);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(transformations, label);
     }
 
     @Override
