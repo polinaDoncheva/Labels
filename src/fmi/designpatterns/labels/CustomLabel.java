@@ -1,8 +1,11 @@
 package fmi.designpatterns.labels;
 
+import fmi.designpatterns.labels.helpLabels.HelpLabel;
+import fmi.designpatterns.labels.helpLabels.NoHelpText;
+
 import java.util.Scanner;
 
-public class CustomLabel implements Label {
+public class CustomLabel extends Label {
 
     private final int timeout;
     private final Scanner scanner;
@@ -10,6 +13,11 @@ public class CustomLabel implements Label {
     private String text = null;
 
     public CustomLabel(Scanner scanner, int timeout) {
+        this(new NoHelpText(), scanner, timeout);
+    }
+
+    public CustomLabel(HelpLabel helpLabel, Scanner scanner, int timeout) {
+        super(helpLabel);
         this.scanner = scanner;
         this.timeout = timeout;
         count = 0;
