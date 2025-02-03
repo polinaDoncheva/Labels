@@ -17,7 +17,7 @@ public class TextTransformationFactory {
     public static TextTransformation createFrom(String name, List<String> parameters) {
         return switch (name.toLowerCase()) {
             case "capitalize" -> new CapitalizeTransformation();
-            case "censor" -> new CensorTransformation(parameters.getFirst());
+            case "censor" -> CensorTransformationFactory.createFrom(parameters.getFirst());
             case "trim left" -> new TrimLeftTransformation();
             case "trim right" -> new TrimRightTransformation();
             case "normalize space" -> new NormalizeSpaceTransformation();
