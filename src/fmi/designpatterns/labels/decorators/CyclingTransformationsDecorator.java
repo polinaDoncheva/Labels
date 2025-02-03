@@ -19,7 +19,7 @@ public class CyclingTransformationsDecorator extends LabelDecoratorBase {
 
     @Override
     public boolean equals(Object object) {
-        if(this == object) {
+        if (this == object) {
             return true;
         }
 

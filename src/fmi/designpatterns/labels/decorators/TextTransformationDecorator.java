@@ -16,7 +16,7 @@ public class TextTransformationDecorator extends LabelDecoratorBase {
 
     @Override
     public boolean equals(Object object) {
-        if(this == object) {
+        if (this == object) {
             return true;
         }
 
@@ -34,7 +34,6 @@ public class TextTransformationDecorator extends LabelDecoratorBase {
     public int hashCode() {
         return Objects.hash(transformation, label);
     }
-
 
     @Override
     public String getText() {

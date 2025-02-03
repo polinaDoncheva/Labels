@@ -21,8 +21,9 @@ public class DecoratedLabelFactory {
         return getDecoratedLabel(entry.decorator(), baseLabel, transformations);
     }
 
-    private static Label getDecoratedLabel(String decorator , Label baseLabel, List<TextTransformation> transformations) {
-        if(decorator == null || decorator.isEmpty()) {
+    private static Label getDecoratedLabel(String decorator , Label baseLabel,
+                                           List<TextTransformation> transformations) {
+        if (decorator == null || decorator.isEmpty()) {
             return  baseLabel;
         }
 

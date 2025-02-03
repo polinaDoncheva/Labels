@@ -14,7 +14,7 @@ public class CompositeTransformation implements TextTransformation {
     public String transform(String text) {
         String result = text;
 
-        for(TextTransformation transformation : transformations) {
+        for (TextTransformation transformation : transformations) {
             result = transformation.transform(text);
         }
 

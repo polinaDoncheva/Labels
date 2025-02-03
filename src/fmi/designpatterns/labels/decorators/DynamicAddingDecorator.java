@@ -48,7 +48,7 @@ public class DynamicAddingDecorator extends LabelDecoratorBase {
     public String getText() {
         String text = super.getText();
 
-        for(LabelDecoratorBase decorator : decorators) {
+        for (LabelDecoratorBase decorator : decorators) {
             text = decorator.getText();
         }
 

@@ -10,7 +10,7 @@ public class LabelReader {
         String type = PromptHelper.prompt(scanner, "Enter the label type (simple, rich, dynamic): ");
         String text = null;
 
-        if(!type.equalsIgnoreCase("dynamic")) {
+        if (!type.equalsIgnoreCase("dynamic")) {
             text = PromptHelper.prompt(scanner, "Enter the label text: ");
         }
 

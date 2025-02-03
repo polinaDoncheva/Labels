@@ -7,6 +7,7 @@ import java.util.List;
 
 public class RichLabel extends Label {
 
+    private static final int CONFIGURATIONS_COUNT = 3;
     private final String text;
     private final String color;
     private final String fontName;
@@ -27,8 +28,9 @@ public class RichLabel extends Label {
     public RichLabel(HelpLabel helpLabel, String text, List<String> configuration) {
         super(helpLabel);
 
-        if (configuration.size() != 3) {
-            throw new IllegalArgumentException("Could not create rich label, requires color, font name, and font size.");
+        if (configuration.size() != CONFIGURATIONS_COUNT) {
+            throw new IllegalArgumentException(
+                "Could not create rich label, requires color, font name, and font size.");
         }
 
         int fontSize = 0;
