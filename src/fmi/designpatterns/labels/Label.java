@@ -5,8 +5,6 @@ import fmi.designpatterns.labels.helpLabels.HelpLabel;
 
 public abstract class Label {
 
-    abstract String getText();
-
     private final HelpLabel helpLabel;
 
     public Label(HelpLabel helpLabel) {
@@ -20,4 +18,6 @@ public abstract class Label {
 
         return helpLabel.getHelp(this);
     }
+
+    public abstract String getText();
 }

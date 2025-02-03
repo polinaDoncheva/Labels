@@ -1,13 +1,20 @@
 package fmi.designpatterns.labels.decorators;
 
 import fmi.designpatterns.labels.Label;
+import fmi.designpatterns.labels.helpLabels.HelpLabel;
+import fmi.designpatterns.labels.helpLabels.NoHelpText;
 
-public abstract class LabelDecoratorBase implements Label {
+public abstract class LabelDecoratorBase extends Label {
 
     Label label;
 
-    public LabelDecoratorBase(Label label) {
+    public LabelDecoratorBase(Label label, HelpLabel helpLabel) {
+        super(helpLabel);
         this.label = label;
+    }
+
+    public LabelDecoratorBase(Label label) {
+        this(label, new NoHelpText());
     }
 
     @Override

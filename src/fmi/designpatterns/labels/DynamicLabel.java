@@ -3,21 +3,42 @@ package fmi.designpatterns.labels;
 import fmi.designpatterns.labels.helpLabels.HelpLabel;
 import fmi.designpatterns.labels.helpLabels.NoHelpText;
 
+import java.util.List;
 import java.util.Scanner;
 
-public class CustomLabel extends Label {
+public class DynamicLabel extends Label {
 
     private final int timeout;
     private final Scanner scanner;
     private int count;
     private String text = null;
 
-    public CustomLabel(Scanner scanner, int timeout) {
+    public DynamicLabel(Scanner scanner, int timeout) {
         this(new NoHelpText(), scanner, timeout);
     }
 
-    public CustomLabel(HelpLabel helpLabel, Scanner scanner, int timeout) {
+    public DynamicLabel(HelpLabel helpLabel, Scanner scanner, int timeout) {
         super(helpLabel);
+        this.scanner = scanner;
+        this.timeout = timeout;
+        count = 0;
+    }
+
+    public DynamicLabel(HelpLabel helpLabel, Scanner scanner, List<String> configuration) {
+        super(helpLabel);
+
+        if (configuration.size() != 1) {
+            throw new IllegalArgumentException("DynamicLabel requires only timeout parameter.");
+        }
+
+        int timeout = 0;
+
+        try {
+            timeout = Integer.parseInt(configuration.getFirst());
+        } catch (NumberFormatException e) {
+            throw new IllegalArgumentException("Could not create dynamic label, expects 1st argument int for timeout");
+        }
+
         this.scanner = scanner;
         this.timeout = timeout;
         count = 0;
