@@ -1,7 +1,7 @@
 package fmi.designpatterns.labels;
 
-import fmi.designpatterns.labels.helpLabels.HelpLabel;
-import fmi.designpatterns.labels.helpLabels.NoHelpText;
+import fmi.designpatterns.labels.helplabels.HelpLabel;
+import fmi.designpatterns.labels.helplabels.NoHelpText;
 
 import java.util.List;
 import java.util.Scanner;

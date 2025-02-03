@@ -1,4 +1,4 @@
-package fmi.designpatterns.labels.helpLabels;
+package fmi.designpatterns.labels.helplabels;
 
 import fmi.designpatterns.labels.Label;
 

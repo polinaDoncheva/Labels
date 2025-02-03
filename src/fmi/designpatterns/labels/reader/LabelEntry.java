@@ -1,4 +1,4 @@
-package fmi.designpatterns.labels.creator;
+package fmi.designpatterns.labels.reader;
 
 import java.util.List;
 import java.util.Map;

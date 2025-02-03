@@ -1,8 +1,8 @@
 package fmi.designpatterns.labels.decorators;
 
 import fmi.designpatterns.labels.Label;
-import fmi.designpatterns.labels.helpLabels.HelpLabel;
-import fmi.designpatterns.labels.helpLabels.NoHelpText;
+import fmi.designpatterns.labels.helplabels.HelpLabel;
+import fmi.designpatterns.labels.helplabels.NoHelpText;
 
 public abstract class LabelDecoratorBase extends Label {
 

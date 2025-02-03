@@ -1,7 +1,7 @@
 package fmi.designpatterns.labels;
 
 import fmi.designpatterns.labels.exceptions.HelpLabelException;
-import fmi.designpatterns.labels.helpLabels.HelpLabel;
+import fmi.designpatterns.labels.helplabels.HelpLabel;
 
 public abstract class Label {
 
